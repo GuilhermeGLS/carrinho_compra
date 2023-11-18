@@ -14223,4 +14223,4 @@ const produto = [
 
 export {
     produto
-};
+}

@@ -1,9 +1,11 @@
-import {produto} from '../../produto'
+import { produto } from "../../produto"
 
 const buscarProdutos = async (search) => {
-    // logica de buscar produto
+    // Logica de buscar produto
+    console.log(search);
+    console.log(produto);
 
-
+    return produto;
 }
 
 
