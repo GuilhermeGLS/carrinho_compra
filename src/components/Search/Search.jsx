@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import './Search.css'
+import buscarProdutos from '../../service/buscarProdutos';
 
 function Search() {
   const [search, setSearch] = useState("Telefone")
-  
+
   const buscar = (e) => {
     e.preventDefault()
-    alert(search)
+    
+
+    buscarProdutos(search)
   }
 
   return (
