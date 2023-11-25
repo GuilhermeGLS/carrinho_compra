@@ -1,15 +1,19 @@
-import { useState } from 'react'
+import { useState } from "react";
 import "./ShopCart.css";
 import { BsFillCartFill } from "react-icons/bs";
 
-function ShopCart() {
-  const [count, setCount] = useState(0)
+function ShopCart({atualizarCarrinho}) {
+  const [count, setCount] = useState(0);
 
   return (
-    <button type="button" className="btn btn-primary" onClick={ () => setCount(count + 1)}>
-        <div className="badge" value={count}>
-            <BsFillCartFill fontSize="1.5em"/>
-        </div>
+    <button
+      type="button"
+      className="btn btn-primary"
+      onClick={atualizarCarrinho}
+    >
+      <div className="badge" value={count}>
+        <BsFillCartFill fontSize="1.5em" />
+      </div>
     </button>
   );
 }

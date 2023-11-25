@@ -7,10 +7,14 @@ import Products from "./components/Products/Products";
 function App() {
   // const [count, setCount] = useState(0)
 
+  const atualizarCarrinho = () => {
+    console.log("Evento PAI ativado")
+  } 
+
   return (
     <>
-      <Header />
-      <Products />
+      <Header atualizarCarrinho={atualizarCarrinho}  />
+      <Products atualizarCarrinho={atualizarCarrinho} />
     </>
   );
 }

@@ -3,7 +3,7 @@ import "./Header.css";
 import Search from "../Search/Search";
 import ShopCart from "../ShopCart/ShopCart";
 
-function Header() {
+function Header({atualizarCarrinho}) {
   // const [count, setCount] = useState(0)
 
   return (
@@ -11,7 +11,7 @@ function Header() {
       <div className="container-fluid">
         <a className="navbar-brand">Navbar</a>
         <Search />
-        <ShopCart />
+        <ShopCart atualizarCarrinho={atualizarCarrinho}  />
       </div>
     </nav>
   );
