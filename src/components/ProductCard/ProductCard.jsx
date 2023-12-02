@@ -32,7 +32,7 @@ function ProductCard({ item, atualizarCarrinho }) {
           <button
             href="#"
             className="btn btn-primary"
-            onClick={atualizarCarrinho}
+            // onClick={atualizarCarrinho}
           >
             Go somewhere
           </button>
