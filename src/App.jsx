@@ -1,19 +1,33 @@
-// import { useState } from 'react'
+import { useState, useEffect } from "react";
 import "./App.css";
-import Header from "./components/Header/Header";
-import Products from "./components/products/Products";
+import { Navigate } from "react-router-dom";
 
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+// pages
+import HOME from "./pages/Home";
+import LOGIN from "./pages/Login";
+import Auth from "./pages/Auth";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Auth />,
+  },
+  {
+    path: "/home",
+    element: <HOME />,
+  },
+  {
+    path: "/login",
+    element: <LOGIN />,
+  },
+]);
 
 function App() {
-  // const [count, setCount] = useState(0)
-
-  const atualizarCarrinho = () => {
-    console.log("Evento PAI ativado")
-  } 
-
   return (
     <>
-    
+      <RouterProvider router={router} />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { produto } from "../../produto"
+import { produto } from "../../produtos"
 
 const buscarProdutos = async (search) => {
     // Logica de buscar produto
@@ -7,7 +7,5 @@ const buscarProdutos = async (search) => {
 
     return produto;
 }
-
-
 
 export default buscarProdutos;

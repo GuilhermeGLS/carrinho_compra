@@ -14221,6 +14221,6 @@ const produto = [
     }
 ]
 
-export {
+export  {
     produto
 }
