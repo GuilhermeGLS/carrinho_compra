@@ -6,36 +6,19 @@ import "./ProductCard.css";
 import { Context } from "../../context/Context";
 
 function ProductCard({ item }) {
-  const { addCarrinho } = useContext(Context)
-
-
-  const buscarImagem = (url) => {
-    if (url === undefined) {
-      return "";
-    }
-
-    const url_img = url.split("-I.jpg")[0];
-
-    const new_url_img = `${url_img}-W.jpg`;
-
-    return new_url_img;
-  }
-
-  const converte_real = (numero) => {
-    if (numero === undefined) {
-      return "????????";
-    }
-
-    const novo_valor = numero.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-
-    return novo_valor;
-
-  }
+  const { addCarrinho, buscarImagem, converte_real } = useContext(Context);
 
   const atualizarCarrinho = () => {
     console.log("Produto: ", item);
-    addCarrinho(item)
+    addCarrinho(item);
   };
+
+  const telaFinalizarCompra = () => {
+    /*
+      TODO::
+      Logica de adicionar produto no carrinho e redirecionar para finalizar compra
+    */
+  }
 
   return (
     <>
@@ -50,21 +33,23 @@ function ProductCard({ item }) {
           <p className="card-text">{converte_real(item.price)}</p>
 
           {/* dar um margin ou gap */}
-          <button
-            href="#"
-            className="btn btn-primary"
-            onClick={atualizarCarrinho}
-          >
-            Add Carrinho
-          </button>
-          
-          <button
-            href="#"
-            className="btn btn-primary"
-            onClick={atualizarCarrinho}
-          >
-            Comprar
-          </button>
+          <div className="conatianer row gap-2">
+            <button
+              href="#"
+              className="btn btn-primary"
+              onClick={atualizarCarrinho}
+            >
+              Add Carrinho
+            </button>
+
+            <button
+              href="#"
+              className="btn btn-primary"
+              onClick={telaFinalizarCompra}
+            >
+              Comprar
+            </button>
+          </div>
         </div>
       </div>
     </>
